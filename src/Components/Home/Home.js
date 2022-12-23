@@ -3,15 +3,33 @@ import "./Home.css";
 
 const Home = () => {
   const [sector, setSector] = useState([]);
+  const [value, setValue] = useState("");
   useEffect(() => {
     fetch("http://localhost:5000/sectors")
       .then((res) => res.json())
       .then((data) => setSector(data))
       .catch((error) => console.log(error));
   }, []);
-  console.log(sector);
   const handleSave = (event) => {
     event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const acceptTerms = form.acceptTerms.value;
+    const userData = {
+      name,
+      sector: value,
+      acceptTerms: true,
+    };
+    fetch("http://localhost:5000/user", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    })
+      .then((res) => res.json())
+      .then((data) => setSector(data))
+      .catch((error) => console.log(error));
   };
   return (
     <div>
@@ -34,6 +52,7 @@ const Home = () => {
                     <input
                       type="text"
                       placeholder="Your Name"
+                      name="name"
                       className="input input-bordered w-full"
                       required
                     />
@@ -42,10 +61,13 @@ const Home = () => {
                     <label className="label">
                       <span className="label-text">Sectors</span>
                     </label>
-                    <select className="select select-bordered" required>
-                      <option disabled selected>
-                        Select your sector
-                      </option>
+                    <select
+                      name="sector"
+                      value={value}
+                      onChange={(event) => setValue(event.target.value)}
+                      className="select select-bordered"
+                      required
+                    >
                       {sector.map((sec) => (
                         <option
                           className={`${sec.main ? "font-black" : null} ${
@@ -62,6 +84,7 @@ const Home = () => {
                         type="checkbox"
                         className="checkbox checkbox-primary mr-3"
                         required
+                        name="acceptTerms"
                       />
                       <span className="label-text">Agree to terms</span>
                     </label>
