@@ -1,0 +1,252 @@
+[
+  {
+    "sectorName": "Manufacturing",
+    "main": true
+  },
+  {
+    "sectorName": "Construction materials"
+  },
+  {
+    "sectorName": "Electronics and Optics"
+  },
+  {
+    "sectorName": "Food and Beverage",
+    "sub": true
+  },
+  {
+    "sectorName": "Bakery & confectionery products"
+  },
+  {
+    "sectorName": "Beverages"
+  },
+  {
+    "sectorName": "Fish & fish products"
+  },
+  {
+    "sectorName": "Meat & meat products"
+  },
+  {
+    "sectorName": "Milk & dairy products"
+  },
+  {
+    "sectorName": "Other"
+  },
+  {
+    "sectorName": "Sweets & snack food"
+  },
+  {
+    "sectorName": "Furniture",
+    "sub": true
+  },
+  {
+    "sectorName": "Bathroom/sauna"
+  },
+  {
+    "sectorName": "Bedroom"
+  },
+  {
+    "sectorName": "Childrenâ€™s room "
+  },
+  {
+    "sectorName": "Kitchen"
+  },
+  {
+    "sectorName": "Living room"
+  },
+  {
+    "sectorName": "Office"
+  },
+  {
+    "sectorName": "Other (Furniture)"
+  },
+  {
+    "sectorName": "Outdoor"
+  },
+  {
+    "sectorName": "Project furniture"
+  },
+  {
+    "sectorName": "Machinery",
+    "sub": true
+  },
+  {
+    "sectorName": "Machinery components"
+  },
+  {
+    "sectorName": "Machinery equipment/tools"
+  },
+  {
+    "sectorName": "Manufacture of machinery"
+  },
+  {
+    "sectorName": "Maritime"
+  },
+  {
+    "sectorName": "Aluminium and steel workboats"
+  },
+  {
+    "sectorName": "Boat/Yacht building"
+  },
+  {
+    "sectorName": "Ship repair and conversion"
+  },
+  {
+    "sectorName": "Metal structures"
+  },
+  {
+    "sectorName": "Other"
+  },
+  {
+    "sectorName": "Repair and maintenance service"
+  },
+  {
+    "sectorName": "Metalworking",
+    "sub": true
+  },
+  {
+    "sectorName": "Construction of metal structures"
+  },
+  {
+    "sectorName": "Houses and buildings"
+  },
+  {
+    "sectorName": "Metal products"
+  },
+  {
+    "sectorName": "Metal works"
+  },
+  {
+    "sectorName": "CNC-machining"
+  },
+  {
+    "sectorName": "Forgings, Fasteners"
+  },
+  {
+    "sectorName": "Gas, Plasma, Laser cutting"
+  },
+  {
+    "sectorName": "MIG, TIG, Aluminum welding"
+  },
+  {
+    "sectorName": "Plastic and Rubber",
+    "sub": true
+  },
+  {
+    "sectorName": "Packaging"
+  },
+  {
+    "sectorName": "Plastic goods"
+  },
+  {
+    "sectorName": "Plastic processing technology"
+  },
+  {
+    "sectorName": "Blowing"
+  },
+  {
+    "sectorName": "Moulding"
+  },
+  {
+    "sectorName": "Plastics welding and processing"
+  },
+  {
+    "sectorName": "Plastic profiles"
+  },
+  {
+    "sectorName": "Printing",
+    "sub": true
+  },
+  {
+    "sectorName": "Advertising"
+  },
+  {
+    "sectorName": "Book/Periodicals printing"
+  },
+  {
+    "sectorName": "Labelling and packaging printing"
+  },
+  {
+    "sectorName": "Textile and Clothing",
+    "sub": true
+  },
+  {
+    "sectorName": "Clothing"
+  },
+  {
+    "sectorName": "Textile"
+  },
+  {
+    "sectorName": "Wood",
+    "sub": true
+  },
+  {
+    "sectorName": "Other (Wood)"
+  },
+  {
+    "sectorName": "Wooden building materials"
+  },
+  {
+    "sectorName": "Wooden houses"
+  },
+  {
+    "sectorName": "Other",
+    "main": true
+  },
+  {
+    "sectorName": "Creative industries"
+  },
+  {
+    "sectorName": "Energy technology"
+  },
+  {
+    "sectorName": "Environment"
+  },
+  {
+    "sectorName": "Service",
+    "main": true
+  },
+  {
+    "sectorName": "Business services"
+  },
+  {
+    "sectorName": "Engineering"
+  },
+  {
+    "sectorName": "Information Technology and Telecommunications",
+    "sub": true
+  },
+  {
+    "sectorName": "Data processing, Web portals, E-marketing"
+  },
+  {
+    "sectorName": "Programming, Consultancy"
+  },
+  {
+    "sectorName": "Software, Hardware"
+  },
+  {
+    "sectorName": "Telecommunications"
+  },
+  {
+    "sectorName": "Tourism"
+  },
+  {
+    "sectorName": "Translation services"
+  },
+  {
+    "sectorName": "Transport and Logistics",
+    "sub": true
+  },
+  {
+    "sectorName": "Air"
+  },
+  {
+    "sectorName": "Rail"
+  },
+  {
+    "sectorName": "Road"
+  },
+  {
+    "sectorName": "Water"
+  }
+]

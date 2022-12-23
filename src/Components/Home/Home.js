@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 
 const Home = () => {
+  const [sector, setSector] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/sectors")
+      .then((res) => res.json())
+      .then((data) => setSector(data))
+      .catch((error) => console.log(error));
+  }, []);
+  console.log(sector);
   const handleSave = (event) => {
     event.preventDefault();
   };
@@ -38,13 +46,14 @@ const Home = () => {
                       <option disabled selected>
                         Select your sector
                       </option>
-                      <option>Manufacturing</option>
-                      <option>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Construction materials
-                      </option>
-                      <option>Lord of the Rings</option>
-                      <option>Planet of the Apes</option>
-                      <option>Star Trek</option>
+                      {sector.map((sec) => (
+                        <option
+                          className={`${sec.main ? "font-black" : null} ${
+                            sec.sub ? "font-bold" : null
+                          }`}
+                          key={sec}
+                        >{`${sec.sectorName}`}</option>
+                      ))}
                     </select>
                   </div>
                   <div className="form-control mt-5">
