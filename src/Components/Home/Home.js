@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
 import "./Home.css";
 
 const Home = () => {
@@ -15,10 +16,11 @@ const Home = () => {
     const form = event.target;
     const name = form.name.value;
     const acceptTerms = form.acceptTerms.value;
+    console.log(acceptTerms);
     const userData = {
       name,
-      sector: value,
-      acceptTerms: true,
+      selectedSector: value,
+      acceptTerms,
     };
     fetch("http://localhost:5000/user", {
       method: "POST",
@@ -28,7 +30,11 @@ const Home = () => {
       body: JSON.stringify(userData),
     })
       .then((res) => res.json())
-      .then((data) => setSector(data))
+      .then((data) => {
+        if (data.acknowledged) {
+          toast.success("User Added Successfully!");
+        }
+      })
       .catch((error) => console.log(error));
   };
   return (
