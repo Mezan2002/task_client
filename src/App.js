@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home/Home";
 import UpdateUser from "./Components/UpdateUser/UpdateUser";
+import UpdateUserModal from "./Components/UpdateUserModal/UpdateUserModal";
 
 function App() {
   const [user, setUser] = useState("");

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
+import UpdateUserModal from "../UpdateUserModal/UpdateUserModal";
 import "./Home.css";
 
 const Home = ({ setUser }) => {
   const [sector, setSector] = useState([]);
   const [value, setValue] = useState("");
   useEffect(() => {
-    fetch("http://localhost:5000/sectors")
+    fetch("https://task-server-three.vercel.app/sectors")
       .then((res) => res.json())
       .then((data) => setSector(data))
       .catch((error) => console.log(error));
@@ -23,7 +24,7 @@ const Home = ({ setUser }) => {
       selectedSector: value,
       acceptTerms,
     };
-    fetch("http://localhost:5000/user", {
+    fetch("https://task-server-three.vercel.app/user", {
       method: "POST",
       headers: {
         "content-type": "application/json",
