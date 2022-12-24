@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
-import { FaTrash, FaUserEdit } from "react-icons/fa";
+import { FaArrowLeft, FaTrash, FaUserEdit } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import UpdateUserModal from "../UpdateUserModal/UpdateUserModal";
 
 const UpdateUser = () => {
@@ -40,7 +41,14 @@ const UpdateUser = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div className="mt-10 ">
+    <div className="mt-10">
+      <Link
+        to="/"
+        className="btn rounded-full absolute md:left-10 top-2 md:top-5 left-2"
+      >
+        {" "}
+        <FaArrowLeft></FaArrowLeft>{" "}
+      </Link>
       <div className="">
         <h2 className="text-3xl font-bold text-center mb-10">Update User</h2>
         <div className="md:w-6/12 mx-auto neomorphic card rounded-none">

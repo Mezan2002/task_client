@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
-import UpdateUserModal from "../UpdateUserModal/UpdateUserModal";
 import "./Home.css";
 
-const Home = ({ setUser }) => {
+const Home = () => {
   const [sector, setSector] = useState([]);
   const [value, setValue] = useState("");
   useEffect(() => {
@@ -34,7 +33,6 @@ const Home = ({ setUser }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-          setUser(name, value);
           toast.success("User Added Successfully!");
         }
       })
