@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
-const Home = () => {
+const Home = ({ setUser }) => {
   const [sector, setSector] = useState([]);
   const [value, setValue] = useState("");
   useEffect(() => {
@@ -32,6 +33,7 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
+          setUser(name, value);
           toast.success("User Added Successfully!");
         }
       })
@@ -43,66 +45,74 @@ const Home = () => {
         <div className="hero-content flex-col-reverse items-center md:flex-row-reverse md:px-5">
           <div className="md:w-1/2">
             <div className="card neomorphic mx-auto shadow-xl">
-              <form onSubmit={handleSave} className="card-body">
-                <h2 className="card-title">
-                  <p className="text-center mb-10 text-xl">
-                    Please enter your name and pick the Sectors you are
-                    currently involved in.
-                  </p>
-                </h2>
-                <div className="mb-5">
-                  <div className="form-control w-full">
-                    <label className="label">
-                      <span className="label-text">Your Name</span>
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Your Name"
-                      name="name"
-                      className="input input-bordered w-full"
-                      required
-                    />
-                  </div>
-                  <div className="form-control w-full">
-                    <label className="label">
-                      <span className="label-text">Sectors</span>
-                    </label>
-                    <select
-                      name="sector"
-                      value={value}
-                      onChange={(event) => setValue(event.target.value)}
-                      className="select select-bordered"
-                      required
-                    >
-                      {sector.map((sec) => (
-                        <option
-                          className={`${sec.main ? "font-black" : null} ${
-                            sec.sub ? "font-bold" : null
-                          }`}
-                          key={sec}
-                        >{`${sec.sectorName}`}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="form-control mt-5">
-                    <label className="flex items-center cursor-pointer w-[135px]">
+              <div className="card-body">
+                <form onSubmit={handleSave} className="">
+                  <h2 className="card-title">
+                    <p className="text-center mb-10 text-xl">
+                      Please enter your name and pick the Sectors you are
+                      currently involved in.
+                    </p>
+                  </h2>
+                  <div className="mb-5">
+                    <div className="form-control w-full">
+                      <label className="label">
+                        <span className="label-text">Your Name</span>
+                      </label>
                       <input
-                        type="checkbox"
-                        className="checkbox checkbox-primary mr-3"
+                        type="text"
+                        placeholder="Your Name"
+                        name="name"
+                        className="input input-bordered w-full"
                         required
-                        name="acceptTerms"
                       />
-                      <span className="label-text">Agree to terms</span>
-                    </label>
+                    </div>
+                    <div className="form-control w-full">
+                      <label className="label">
+                        <span className="label-text">Sectors</span>
+                      </label>
+                      <select
+                        name="sector"
+                        value={value}
+                        onChange={(event) => setValue(event.target.value)}
+                        className="select select-bordered"
+                        required
+                      >
+                        {sector.map((sec) => (
+                          <option
+                            className={`${sec.main ? "font-black" : null} ${
+                              sec.sub ? "font-bold" : null
+                            }`}
+                            key={sec}
+                          >{`${sec.sectorName}`}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="form-control mt-5">
+                      <label className="flex items-center cursor-pointer w-[135px]">
+                        <input
+                          type="checkbox"
+                          className="checkbox checkbox-primary mr-3"
+                          required
+                          name="acceptTerms"
+                        />
+                        <span className="label-text">Agree to terms</span>
+                      </label>
+                    </div>
                   </div>
+                  <div className="card-actions">
+                    <button className="btn btn-primary btn-block">Save</button>
+                  </div>
+                </form>
+                <div className="divider w-10/12 mx-auto">Or</div>
+                <div>
+                  <Link to="/updateUser" className="btn btn-block">
+                    Update your data
+                  </Link>
                 </div>
-                <div className="card-actions">
-                  <button className="btn btn-primary btn-block">Save</button>
-                </div>
-              </form>
+              </div>
             </div>
           </div>
-          <div className="md:w-1/2 lg:mt-[-380px] md:relative md:text-left text-center">
+          <div className="md:w-1/2 md:mt-20 lg:mt-[-470px] md:relative md:text-left text-center">
             <h1 className="lg:text-4xl md:text-2xl text-3xl text-primary font-bold capitalize">
               Welcome to our community
             </h1>
@@ -112,7 +122,7 @@ const Home = () => {
             <img
               src="https://i.ibb.co/HDSFB0v/Screenshot-2022-12-23-233201-removebg-preview.png"
               alt=""
-              className="lg:absolute top-0 right-0"
+              className="lg:absolute top-0 left-0 md:rotate-45 w-full"
             />
           </div>
         </div>
