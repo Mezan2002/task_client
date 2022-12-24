@@ -112,7 +112,7 @@ const Home = ({ setUser }) => {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 md:mt-20 lg:mt-[-470px] md:relative md:text-left text-center">
+          <div className="md:w-1/2 md:mt-20 lg:mt-[-460px] md:relative md:text-left text-center">
             <h1 className="lg:text-4xl md:text-2xl text-3xl text-primary font-bold capitalize">
               Welcome to our community
             </h1>
@@ -122,7 +122,7 @@ const Home = ({ setUser }) => {
             <img
               src="https://i.ibb.co/HDSFB0v/Screenshot-2022-12-23-233201-removebg-preview.png"
               alt=""
-              className="lg:absolute top-0 left-0 md:rotate-45 w-full"
+              className="lg:absolute top-0 left-[-50px] md:rotate-45 w-11/12"
             />
           </div>
         </div>
