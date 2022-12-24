@@ -1,41 +1,42 @@
 import React from "react";
+import { FaTrash, FaUserEdit } from "react-icons/fa";
 
 const UpdateUser = () => {
   return (
-    <div className="flex items-center justify-center">
-      <div className="overflow-x-auto">
-        <table className="table w-full">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>1</th>
-              <td>Cy Ganderton</td>
-              <td>Quality Control Specialist</td>
-              <td>Blue</td>
-            </tr>
-
-            <tr className="active">
-              <th>2</th>
-              <td>Hart Hagerty</td>
-              <td>Desktop Support Technician</td>
-              <td>Purple</td>
-            </tr>
-
-            <tr>
-              <th>3</th>
-              <td>Brice Swyre</td>
-              <td>Tax Accountant</td>
-              <td>Red</td>
-            </tr>
-          </tbody>
-        </table>
+    <div className="mt-10 ">
+      <div className="">
+        <h2 className="text-3xl font-bold text-center mb-10">Update User</h2>
+        <div className="md:w-6/12 mx-auto neomorphic card">
+          <div className="overflow-x-auto">
+            <table className="table w-full">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Sector</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>Mezan</td>
+                  <td>Programmer</td>
+                  <td>
+                    <button className="btn btn-ghost btn-sm mr-3">
+                      {" "}
+                      <FaTrash className="text-xl"></FaTrash>{" "}
+                    </button>
+                    <button className="btn btn-ghost btn-sm">
+                      {" "}
+                      <FaUserEdit className="text-xl"></FaUserEdit>{" "}
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   );

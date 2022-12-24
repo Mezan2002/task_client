@@ -10,7 +10,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home></Home>,
+      element: <Home setUser={setUser}></Home>,
     },
     {
       path: "/updateUser",
